@@ -1,7 +1,6 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/homepage.styles.scss';
-import HomePage from './components/homepage.component';
+import './App.css';
+import HomePage from './pages/home/homepage.component';
 
 function App() {
   return (
