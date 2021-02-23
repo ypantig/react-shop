@@ -52,8 +52,8 @@ class Category extends React.Component {
   render() {
     return (
       <div className='category row'>
-        {this.state.sections.map(({ title, imageUrl, id, colWidth, size }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} colWidth={colWidth} size={size} />
+        {this.state.sections.map(({ id, ...sectionProps }) => (
+          <MenuItem key={id} {...sectionProps} />
         ))}
       </div>
     );

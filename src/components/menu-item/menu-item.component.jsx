@@ -1,8 +1,13 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 import './menu-item.styles.scss';
 
-const MenuItem = ({ title, imageUrl, colWidth, size }) => (
-  <div className={`menu-item menu-item-${size} col-12 col-md-${colWidth} mb-4`}>
+const MenuItem = ({ title, imageUrl, colWidth, size, history, linkUrl, match }) => (
+  <div
+    className={`menu-item menu-item-${size} col-12 col-md-${colWidth} mb-4`}
+    onClick={() => history.push(`${match.url}${linkUrl}`)}
+  >
     <div className='inner d-flex align-items-center justify-content-center'>
       <div
         class='image'
@@ -18,4 +23,4 @@ const MenuItem = ({ title, imageUrl, colWidth, size }) => (
   </div>
 );
 
-export default MenuItem;
+export default withRouter(MenuItem);
