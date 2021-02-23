@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuItem from '../menu-item/menu-item.component';
+import CategoryItem from '../category-item/category-item.component';
 import './category.styles.scss';
 
 class Category extends React.Component {
@@ -53,7 +53,7 @@ class Category extends React.Component {
     return (
       <div className='category row'>
         {this.state.sections.map(({ id, ...sectionProps }) => (
-          <MenuItem key={id} {...sectionProps} />
+          <CategoryItem key={id} {...sectionProps} />
         ))}
       </div>
     );

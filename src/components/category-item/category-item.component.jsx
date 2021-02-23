@@ -1,11 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import './menu-item.styles.scss';
+import './category-item.styles.scss';
 
-const MenuItem = ({ title, imageUrl, colWidth, size, history, linkUrl, match }) => (
+const CategoryItem = ({ title, imageUrl, colWidth, size, history, linkUrl, match }) => (
   <div
-    className={`menu-item menu-item-${size} col-12 col-md-${colWidth} mb-4`}
+    className={`category-item category-item-${size} col-12 col-md-${colWidth} mb-4`}
     onClick={() => history.push(`${match.url}${linkUrl}`)}
   >
     <div className='inner d-flex align-items-center justify-content-center'>
@@ -23,4 +23,4 @@ const MenuItem = ({ title, imageUrl, colWidth, size, history, linkUrl, match }) 
   </div>
 );
 
-export default withRouter(MenuItem);
+export default withRouter(CategoryItem);
