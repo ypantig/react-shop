@@ -1,0 +1,40 @@
+$gray-500: #adb5bd;
+$black: black;
+
+@mixin shrinkLabel {
+  font-size: 0.7rem;
+  color: $black;
+  top: -50%;
+  padding: 0;
+  transform: translateY(50%);
+}
+
+.form-group {
+  position: relative;
+
+  .form-control {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid $gray-500;
+
+    &:focus + label {
+      @include shrinkLabel;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-bottom-color: $black;
+    }
+  }
+
+  .form-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+
+    &.shrink {
+      @include shrinkLabel;
+    }
+  }
+}

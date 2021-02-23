@@ -4,7 +4,7 @@ import './homepage.styles.scss';
 import Category from '../../components/category/category.component';
 
 const HomePage = () => (
-  <div className='homepage container'>
+  <div>
     <Category />
   </div>
 );
